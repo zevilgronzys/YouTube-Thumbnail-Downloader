@@ -3,74 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YouTube Thumbnail Downloader</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>YouTube Thumbnail Downloader | Download HD Thumbnails in 1 Click</title>
+    <meta name="description" content="Free YouTube Thumbnail Downloader - Download any YouTube video thumbnail in HD, 4K, and SD quality instantly. No watermark, no login required!" />
+    <meta name="keywords" content="YouTube thumbnail downloader, HD thumbnail download, YouTube video thumbnail, free thumbnail downloader" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="container">
         <h1>YouTube Thumbnail Downloader</h1>
-        <input type="text" id="videoUrl" placeholder="Paste YouTube Video URL">
+        <p>Enter a YouTube video URL below to download its thumbnail in multiple resolutions.</p>
+
+        <input type="text" id="videoUrl" placeholder="Enter YouTube Video URL">
         <button onclick="getThumbnail()">Get Thumbnail</button>
-        <div id="result"></div>
-    </div>
-    <script src="script.js"></script>
-    <div class="thumbnail-section">
-    <h3>Choose Thumbnail Quality</h3>
-    <select id="quality" onchange="changeQuality()">
-        <option value="default">Select Quality</option>
-        <option value="high">High Quality</option>
-        <option value="medium">Medium Quality</option>
-        <option value="low">Low Quality</option>
-    </select>
-    <br>
-    <button id="downloadBtn" onclick="downloadThumbnail()">Download Thumbnail</button>
-    </div>
-    <div class="tutorial-section">
-    <h3>How to Download a YouTube Thumbnail?</h3>
-    <p>Follow these simple steps to download your favorite YouTube thumbnail:</p>
-    <ol>
-        <li>Select the quality of the thumbnail (High, Medium, or Low).</li>
-        <li>Click on the "Download Thumbnail" button.</li>
-        <li>Your selected thumbnail will be automatically downloaded to your device.</li>
-    </ol>
+
+        <div id="thumbnailContainer" class="hidden">
+            <h2>Download Thumbnails:</h2>
+            <img id="thumbnail" src="" alt="YouTube Thumbnail">
+            
+            <div class="download-links">
+                <a id="download4K" download>Download 4K</a>
+                <a id="downloadHD" download>Download HD</a>
+                <a id="downloadSD" download>Download SD</a>
+                <a id="downloadLow" download>Download Low Quality</a>
             </div>
-
-    <script> 
-    let quality = "high"; // Default quality
-
-function changeQuality() {
-    quality = document.getElementById('quality').value;
-}
-
-function downloadThumbnail() {
-    let thumbnailUrl = '';
-
-    if (quality === 'high') {
-        thumbnailUrl = 'URL_OF_HIGH_QUALITY_THUMBNAIL';
-    } else if (quality === 'medium') {
-        thumbnailUrl = 'URL_OF_MEDIUM_QUALITY_THUMBNAIL';
-    } else if (quality === 'low') {
-        thumbnailUrl = 'URL_OF_LOW_QUALITY_THUMBNAIL';
-    } else {
-        alert("Please select a valid quality.");
-        return;
-    }
-
-    // Automatically download the selected thumbnail
-    const a = document.createElement('a');
-    a.href = thumbnailUrl;
-    a.download = 'thumbnail.jpg';
-    a.click();
-}
-    </script>
-    <div class="tutorial-section">
-    <h3>How to Download a YouTube Thumbnail?</h3>
-    <p>Follow these simple steps to download your favorite YouTube thumbnail:</p>
-    <ol>
-        <li>Select the quality of the thumbnail (High, Medium, or Low).</li>
-        <li>Click on the "Download Thumbnail" button.</li>
-        <li>Your selected thumbnail will be automatically downloaded to your device.</li>
-    </ol>
+        </div>
     </div>
+
+    <script src="script.js"></script>
+    <div class="seo-content">
+    <h2>What is YouTube Thumbnail Downloader?</h2>
+    <p>YouTube Thumbnail Downloader is a free tool that allows users to extract and download YouTube video thumbnails in different resolutions...</p>
+
+    <h2>How to Download YouTube Thumbnails?</h2>
+    <p>Follow these simple steps to download YouTube thumbnails easily:</p>
+    <ul>
+        <li>Step 1: Copy the YouTube video URL.</li>
+        <li>Step 2: Paste the URL into the search box above.</li>
+        <li>Step 3: Click the "Get Thumbnail" button.</li>
+        <li>Step 4: Download the thumbnail in 4K, HD, SD, or Low quality.</li>
+    </ul>
+
+    <h2>Why Use This Tool?</h2>
+    <p>Our tool is 100% free, fast, and works without any registration...</p>
+    </div>
+
 </body>
 </html>
