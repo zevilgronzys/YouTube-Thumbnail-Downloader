@@ -34,5 +34,34 @@
         <li>Your selected thumbnail will be automatically downloaded to your device.</li>
     </ol>
             </div>
+
+    <script> 
+    let quality = "high"; // Default quality
+
+function changeQuality() {
+    quality = document.getElementById('quality').value;
+}
+
+function downloadThumbnail() {
+    let thumbnailUrl = '';
+
+    if (quality === 'high') {
+        thumbnailUrl = 'URL_OF_HIGH_QUALITY_THUMBNAIL';
+    } else if (quality === 'medium') {
+        thumbnailUrl = 'URL_OF_MEDIUM_QUALITY_THUMBNAIL';
+    } else if (quality === 'low') {
+        thumbnailUrl = 'URL_OF_LOW_QUALITY_THUMBNAIL';
+    } else {
+        alert("Please select a valid quality.");
+        return;
+    }
+
+    // Automatically download the selected thumbnail
+    const a = document.createElement('a');
+    a.href = thumbnailUrl;
+    a.download = 'thumbnail.jpg';
+    a.click();
+}
+    </script>
 </body>
 </html>
